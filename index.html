@@ -1,0 +1,326 @@
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+hr{
+border: none;
+height: 10px;
+}
+html { /* MARGEM E BORDA DA PÁGINA */
+border: 1px solid;
+margin: 8px 8px 8px 8px;
+background-color: bisque;
+}
+.logo_img { /* FORMATAÇÃO IMAGEM */
+width: 60px; 
+height: 60px; 
+border: 1px solid; 
+border-radius: 50%; 
+object-fit: cover;
+}
+.nome_marca { /* NOME MARCA */
+font-size: 20px;
+color: blue;
+}
+.slogan { /* SLOGAN */
+text-align: right;
+font-size: 15px;
+margin: 0;
+margin-left: auto; 
+}
+.taxa_entrega {  /* TAXA DE ENTREGA */
+border: 1px solid; 
+margin: 8px -9px;
+justify-content:space-around; 
+display: flex;
+padding: 8px;
+background-color: bisque;
+}
+.início_site { /* ALINHAMENTO INÍCIO SITE */
+display: flex; 
+align-items: center;
+border: 1px solid;
+gap: 2px;
+padding: 10px;
+margin: -9px -9px -9px -9px;
+background-color: bisque;
+}
+.vitrine-container {
+  position: relative; /* Base para alinhar a seta flutuante */
+  width: 100%;
+  max-width: 100%;
+  background-color: bisque; /* Fundo laranja idêntico ao da imagem */
+  padding: 30px 60px;
+  box-sizing: border-box;
+  border: none;
+ left: -9;
+margin: -8px 5px 5px 8px;
+padding: 2px 5px 15px 20px;
+}
+
+/* O trilho que organiza os cartões horizontalmente */
+.trilho-produtos {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* Permite arrastar/rolar lateralmente */
+  scroll-behavior: smooth; /* Torna o clique na seta suave */
+  scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+
+
+/* Esconde a barra de rolagem no Chrome e Safari */
+.trilho-produtos::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Estilo individual de cada cartão branco */
+.produto-card {
+  flex: 0 0 220px; /* Largura fixa de cada cartão de produto */
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Centralização das fotos dos produtos */
+.imagem-box {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.imagem-box img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+.titulo-produto {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 10px 0;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Coloca os "..." se o nome for grande */
+}
+
+
+/* Alinhamento dos selos vermelhos e rosas */
+.tag-oferta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+
+.desconto {
+  background-color: #d1004b; /* Fundo vinho/vermelho */
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.selo-evento {
+  color: #d1004b;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Seção de preços abaixo */
+.precos {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.preco-atual {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+}
+.preco-antigo {
+  font-size: 12px;
+  color: #777;
+  text-decoration: line-through; /* Linha riscando o preço antigo */
+}
+
+/* ─── A SETA FLUTUANTE IGUAL À DA IMAGEM ─── */
+.btn-proximo, .btn-anterior {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  width: 45px;
+  height: 75px; /* Formato retangular igual ao da imagem */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px 0px 0px 8px; /* Cantos arredondados na esquerda */
+  box-shadow: -2px 2px 8px rgba(0,0,0,0.15);
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+}
+.btn-anterior {
+  left: 5px; /* Fixa na borda esquerda */
+  border-radius: 0px 8px 8px 0px; /* Cantos arredondados na direita */
+}
+.btn-proximo {
+  right: 5px; /* Fixa na borda direita */
+  border-radius: 8px 0px 0px 8px; /* Cantos arredondados na esquerda */
+}
+.bar_nav  {
+display: flex;
+justify-content: space-around;
+border: 1px solid;
+margin: -9px -9px -9px -9px;
+align-items: center;
+}
+.bar_nav a {
+text-decoration: none; /* Deixa o link sem a cor azul e o sublinhado */
+color: black;
+cursor: pointer;
+padding: 9px;
+position: sticky;
+}
+.bar_nav a:hover {
+  color: black; /* Muda para um tom lindo de Marrom Chocolate */
+background-color: bisque;
+border: 2px solid blue;
+border-radius: 30%;
+}
+</style>
+
+<div class="início_site">
+<img class="logo_img" src="https://img.magnific.com/vetores-gratis/ilustracao-em-vetor-icone-hamburguer-colorido-isolado-no-fundo-branco_134830-1656.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+<p class="nome_marca">Hamburgueria<br>Fast Burguer</p>
+<p class="slogan">O lanche<br>com a entrega<br>mais rápida da região</p>
+</div>
+<p class="taxa_entrega">Frete grátis para compras a partir de R$30,00</p>
+<div class="bar_nav">
+<a href="#Mais_Pedidos" id="Mais_Pedidos">Mais Pedidos</a>
+<a href="#Combos" id="Combos">Combos</a>
+<a href="#Tradicionais" id="Tradicionais">Tradicionais</a>
+<a href="#Pizzas" id="Pizzas">Pizzas</a>
+<a href="#Refrigerantes" id="Refrigerantes">Refrigerantes</a>
+</div>
+<br>
+
+<div class="vitrine-container">
+<p style="margin-top: 5;font-size: 30;">Mais Pedidos</p>
+ 
+  <!-- Trilho horizontal onde os produtos ficam lado a lado -->
+  <div class="trilho-produtos" id="trilho">
+   
+    <!-- Cartão de Produto 1 -->
+    <div class="produto-card">
+      <div class="imagem-box"><img src="https://m.media-amazon.com/images/I/71QS7WTTChL._AC_SX679_.jpg" alt="Mustela"></div>
+      <h3 class="titulo-produto">Mustela Creme...</h3>
+      <div class="tag-oferta">
+        <span class="desconto">44% de desconto</span>
+        <span class="selo-evento">Ofertas 9.9</span>
+      </div>
+      <div class="precos">
+        <span class="preco-atual">R$ 55,28</span>
+        <span class="preco-antigo">R$ 100,24</span>
+      </div>
+    </div>
+
+    <!-- Cartão de Produto 2 -->
+    <div class="produto-card">
+      <div class="imagem-box"><img src="images.jpg" alt="Philips OneBlade"></div>
+      <h3 class="titulo-produto">Philips OneBlade...</h3>
+      <div class="tag-oferta">
+        <span class="desconto">38% de desconto</span>
+        <span class="selo-evento">Ofertas 9.9</span>
+      </div>
+      <div class="precos">
+        <span class="preco-atual">R$ 99,00</span>
+        <span class="preco-antigo">R$ 159,90</span>
+      </div>
+    </div>
+
+
+    <!-- Cartão de Produto 3 -->
+    <div class="produto-card">
+      <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+      <h3 class="titulo-produto">EUCERIN Protetor...</h3>
+      <div class="tag-oferta">
+        <span class="desconto">33% de desconto</span>
+        <span class="selo-evento">Ofertas 9.9</span>
+      </div>
+      <div class="precos">
+        <span class="preco-atual">R$ 62,92</span>
+        <span class="preco-antigo">R$ 94,90</span>
+      </div>
+    </div>
+
+ <div class="produto-card">
+      <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+      <h3 class="titulo-produto">EUCERIN Protetor...</h3>
+      <div class="tag-oferta">
+        <span class="desconto">33% de desconto</span>
+        <span class="selo-evento">Ofertas 9.9</span>
+      </div>
+      <div class="precos">
+        <span class="preco-atual">R$ 62,92</span>
+        <span class="preco-antigo">R$ 94,90</span>
+      </div>
+    </div>
+
+     <div class="produto-card">
+      <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+      <h3 class="titulo-produto">EUCERIN Protetor...</h3>
+      <div class="tag-oferta">
+        <span class="desconto">33% de desconto</span>
+        <span class="selo-evento">Ofertas 9.9</span>
+      </div>
+      <div class="precos">
+        <span class="preco-atual">R$ 62,92</span>
+        <span class="preco-antigo">R$ 94,90</span>
+      </div>
+    </div>
+
+ <div class="produto-card">
+      <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+      <h3 class="titulo-produto">EUCERIN Protetor...</h3>
+      <div class="tag-oferta">
+        <span class="desconto">33% de desconto</span>
+        <span class="selo-evento">Ofertas 9.9</span>
+      </div>
+      <div class="precos">
+        <span class="preco-atual">R$ 62,92</span>
+        <span class="preco-antigo">R$ 94,90</span>
+      </div>
+    
+      <!-- Botão Flutuante de Avançar (Seta da Imagem) -->
+  <button class="btn-proximo" onclick="avancarCarrossel()">
+    &#10217; <!-- Código HTML para a seta > -->
+  </button>
+   <button class="btn-anterior" onclick="voltarCarrossel()">
+    &#10216; <!-- Código HTML para a seta < -->
+  </button>
+</div>
+</div>
+
+
+  
+<script>
+function avancarCarrossel() {
+  const trilho = document.getElementById('trilho');
+  // Rola para a direita o equivalente à largura de um cartão + o espaçamento (gap)
+  trilho.scrollBy({ left: 265, behavior: 'smooth' });
+}
+function voltarCarrossel() {
+  const trilho = document.getElementById('trilho');
+  trilho.scrollBy({ left: -265, behavior: 'smooth' }); // Valor negativo para voltar
+}
+</script>
+</html>
