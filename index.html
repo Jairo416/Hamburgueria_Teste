@@ -2,9 +2,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-hr{
-border: none;
-height: 10px;
+.título_seções{
+scroll-margin-top: 70px; /* Cria o recuo ideal para a barra preta não cobrir o texto */
+}
+hr{ /* ESTILOS LINHAS SEPARAÇÃO POR PRODUTOS */
+border: none; 
+height: 5px; 
+background-color: black; 
+width: 100%; 
+border-radius: 50%;
 }
 html { /* MARGEM E BORDA DA PÁGINA */
 border: 1px solid;
@@ -45,15 +51,15 @@ padding: 10px;
 margin: -9px -9px -9px -9px;
 background-color: bisque;
 }
-.vitrine-container {
-  position: relative; /* Base para alinhar a seta flutuante */
-  width: 100%;
-  max-width: 100%;
-  background-color: bisque; /* Fundo laranja idêntico ao da imagem */
-  padding: 30px 60px;
-  box-sizing: border-box;
-  border: none;
- left: -9;
+.vitrine-container { /* FORMATO FUNDO DOS PRODUTOS */
+position: relative; /* Base para alinhar a seta flutuante */
+width: 100%;
+max-width: 100%;
+background-color: bisque; /* Fundo laranja idêntico ao da imagem */
+padding: 30px 60px;
+box-sizing: border-box;
+border: none;
+left: -9;
 margin: -8px 5px 5px 8px;
 padding: 2px 5px 15px 20px;
 }
@@ -184,13 +190,16 @@ margin: -9px -9px -9px -9px;
 align-items: center;
 white-space: nowrap;
 overflow-x: auto;
+position: sticky;
+top: 0px;
+z-index: 9999;
+background-color: black;
 }
 .bar_nav a {
 text-decoration: none; /* Deixa o link sem a cor azul e o sublinhado */
-color: black;
+color: white;
 cursor: pointer;
 padding: 9px;
-position: sticky;
 }
 .bar_nav a:hover {
   color: black; /* Muda para um tom lindo de Marrom Chocolate */
@@ -207,19 +216,117 @@ border-radius: 30%;
 </div>
 <p class="taxa_entrega">Frete grátis para compras a partir de R$30,00</p>
 <div class="bar_nav">
-<a href="#Mais_Pedidos" id="Mais_Pedidos">Mais Pedidos</a>
-<a href="#Combos" id="Combos">Combos</a>
-<a href="#Tradicionais" id="Tradicionais">Tradicionais</a>
-<a href="#Pizzas" id="Pizzas">Pizzas</a>
-<a href="#Refrigerantes" id="Refrigerantes">Refrigerantes</a>
+<a href="#Mais_Pedidos">Mais Pedidos</a>
+<a href="#Combos">Combos</a>
+<a href="#Tradicionais">Tradicionais</a>
+<a href="#Pizzas">Pizzas</a>
+<a href="#Refrigerantes" >Refrigerantes</a>
 </div>
+<br><br>
+
+<div class="vitrine-container"> <!-- PRODUTOS MAIS PEDIDOS -->
+<p style="margin-top: 5;font-size: 30;" id="Mais_Pedidos" class="título_seções">Mais Pedidos</p>
+
+<!-- Trilho horizontal onde os produtos ficam lado a lado -->
+<div class="trilho-produtos" id="trilho">
+   
+<!-- Cartão de Produto 1 -->
+<div class="produto-card">
+<div class="imagem-box"><img src="https://m.media-amazon.com/images/I/71QS7WTTChL._AC_SX679_.jpg" alt="Mustela"></div>
+<h3 class="titulo-produto">Mustela Creme...</h3>
+<div class="tag-oferta">
+<span class="desconto">44% de desconto</span>
+<span class="selo-evento">Ofertas 9.9</span>
+</div>
+<div class="precos">
+<span class="preco-atual">R$ 55,28</span>
+<span class="preco-antigo">R$ 100,24</span>
+</div>
+</div>
+
+<!-- Cartão de Produto 2 -->
+<div class="produto-card">
+<div class="imagem-box"><img src="images.jpg" alt="Philips OneBlade"></div>
+<h3 class="titulo-produto">Philips OneBlade...</h3>
+<div class="tag-oferta">
+<span class="desconto">38% de desconto</span>
+<span class="selo-evento">Ofertas 9.9</span>
+</div>
+<div class="precos">
+<span class="preco-atual">R$ 99,00</span>
+<span class="preco-antigo">R$ 159,90</span>
+</div>
+</div>
+
+<!-- Cartão de Produto 3 -->
+<div class="produto-card">
+<div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+<h3 class="titulo-produto">EUCERIN Protetor...</h3>
+<div class="tag-oferta">
+<span class="desconto">33% de desconto</span>
+<span class="selo-evento">Ofertas 9.9</span>
+</div>
+<div class="precos">
+<span class="preco-atual">R$ 62,92</span>
+<span class="preco-antigo">R$ 94,90</span>
+</div>
+</div>
+
+<div class="produto-card">
+<div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+<h3 class="titulo-produto">EUCERIN Protetor...</h3>
+<div class="tag-oferta">
+<span class="desconto">33% de desconto</span>
+<span class="selo-evento">Ofertas 9.9</span>
+</div>
+<div class="precos">
+<span class="preco-atual">R$ 62,92</span>
+<span class="preco-antigo">R$ 94,90</span>
+</div>
+</div>
+
+<div class="produto-card">
+<div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+<h3 class="titulo-produto">EUCERIN Protetor...</h3>
+<div class="tag-oferta">
+<span class="desconto">33% de desconto</span>
+<span class="selo-evento">Ofertas 9.9</span>
+</div>
+<div class="precos">
+<span class="preco-atual">R$ 62,92</span>
+<span class="preco-antigo">R$ 94,90</span>
+</div>
+</div>
+
+ <div class="produto-card">
+<div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+<h3 class="titulo-produto">EUCERIN Protetor...</h3>
+<div class="tag-oferta">
+<span class="desconto">33% de desconto</span>
+<span class="selo-evento">Ofertas 9.9</span>
+</div>
+<div class="precos">
+<span class="preco-atual">R$ 62,92</span>
+<span class="preco-antigo">R$ 94,90</span>
+</div>
+    
+<!-- Botão Flutuante de Avançar (Seta da Imagem) -->
+<button class="btn-proximo" onclick="avancarCarrossel() ">
+&#10217; <!-- Código HTML para a seta > -->
+</button>
+<button class="btn-anterior" onclick="voltarCarrossel()">
+&#10216; <!-- Código HTML para a seta < -->
+</button>
+</div></div></div>
+
+<hr style="border: none; height: 5px; background-color: black; width: 100%; border-radius: 50%;">
 <br>
 
 <div class="vitrine-container">
-<p style="margin-top: 5;font-size: 30;">Mais Pedidos</p>
+<p style="margin-top: 5;font-size: 30;" id="Combos" class="título_seções">Combos</p>
  
   <!-- Trilho horizontal onde os produtos ficam lado a lado -->
-  <div class="trilho-produtos" id="trilho">
+  <div class="trilho-produtos" id="trilho_1">
    
     <!-- Cartão de Produto 1 -->
     <div class="produto-card">
@@ -303,18 +410,18 @@ border-radius: 30%;
       </div>
     
       <!-- Botão Flutuante de Avançar (Seta da Imagem) -->
-  <button class="btn-proximo" onclick="avancarCarrossel()">
+  <button class="btn-proximo" onclick="avancarCarrossel1()">
     &#10217; <!-- Código HTML para a seta > -->
   </button>
-   <button class="btn-anterior" onclick="voltarCarrossel()">
+   <button class="btn-anterior" onclick="voltarCarrossel1()">
     &#10216; <!-- Código HTML para a seta < -->
   </button>
-</div>
-</div>
+</div></div></div> 
 
+<hr style="border: none; height: 5px; background-color: black; width: 100%; border-radius: 50%;">
 
-  
 <script>
+// COMEÇO BOTÕES "MAIS PEDIDOS" //
 function avancarCarrossel() {
   const trilho = document.getElementById('trilho');
   // Rola para a direita o equivalente à largura de um cartão + o espaçamento (gap)
@@ -324,5 +431,18 @@ function voltarCarrossel() {
   const trilho = document.getElementById('trilho');
   trilho.scrollBy({ left: -265, behavior: 'smooth' }); // Valor negativo para voltar
 }
+// FIM BOTÕES "MAIS PEDIDOS" //
+
+// COMEÇO BOTÕES "COMBOS" //
+function avancarCarrossel1() {
+  const trilho = document.getElementById('trilho_1');
+  // Rola para a direita o equivalente à largura de um cartão + o espaçamento (gap)
+  trilho.scrollBy({ left: 265, behavior: 'smooth' });
+}
+function voltarCarrossel1() {
+  const trilho = document.getElementById('trilho_1');
+  trilho.scrollBy({ left: -265, behavior: 'smooth' }); // Valor negativo para voltar
+}
+// FIM BOTÕES "COMBOS" //
 </script>
 </html>
