@@ -67,7 +67,7 @@ background-color: bisque; /* Fundo laranja idêntico ao da imagem */
 padding: 30px 60px;
 box-sizing: border-box;
 border: none;
-left: -9;
+left: -15;
 margin: -8px 5px 5px 8px;
 padding: 2px 5px 15px 20px;
 }
@@ -183,7 +183,7 @@ padding: 2px 5px 15px 20px;
   border-radius: 0px 8px 8px 0px; /* Cantos arredondados na direita */
 }
 .btn-proximo {
-  right: 5px; /* Fixa na borda direita */
+  right: -9px; /* Fixa na borda direita */
   border-radius: 8px 0px 0px 8px; /* Cantos arredondados na esquerda */
 }
 .bar_nav  {
@@ -406,10 +406,10 @@ border-radius: 30%;
 <br>
 
 <div class="vitrine-container">
-<p style="margin-top: 5;font-size: 30;" id="Combos" class="título_seções">Tradicionais</p>
+<p style="margin-top: 5;font-size: 30;" id="Tradicionais" class="título_seções">Tradicionais</p>
  
 <!-- Trilho horizontal onde os produtos ficam lado a lado -->
-<div class="trilho-produtos" id="trilho_1">
+<div class="trilho-produtos" id="trilho_2">
    
  <!-- Cartão de Produto 1 -->
 <div class="produto-card">
@@ -487,10 +487,10 @@ border-radius: 30%;
 </div>
    
 <!-- Botão Flutuante de Avançar (Seta da Imagem) -->
-<button class="btn-proximo" onclick="avancarCarrossel1()">
+<button class="btn-proximo" onclick="avancarCarrossel2()">
 &#10217; <!-- Código HTML para a seta > -->
 </button>
-<button class="btn-anterior" onclick="voltarCarrossel1()">
+<button class="btn-anterior" onclick="voltarCarrossel2()">
 &#10216; <!-- Código HTML para a seta < -->
 </button>
 </div></div></div>
@@ -499,10 +499,10 @@ border-radius: 30%;
 <br>
 
 <div class="vitrine-container">
-<p style="margin-top: 5;font-size: 30;" id="Combos" class="título_seções">Pizzas</p>
+<p style="margin-top: 5;font-size: 30;" id="Pizzas" class="título_seções" >Pizzas</p>
  
 <!-- Trilho horizontal onde os produtos ficam lado a lado -->
-<div class="trilho-produtos" id="trilho_1">
+<div class="trilho-produtos" id="trilho_3">
    
  <!-- Cartão de Produto 1 -->
 <div class="produto-card">
@@ -580,10 +580,10 @@ border-radius: 30%;
 </div>
    
 <!-- Botão Flutuante de Avançar (Seta da Imagem) -->
-<button class="btn-proximo" onclick="avancarCarrossel1()">
+<button class="btn-proximo" onclick="avancarCarrossel3()">
 &#10217; <!-- Código HTML para a seta > -->
 </button>
-<button class="btn-anterior" onclick="voltarCarrossel1()">
+<button class="btn-anterior" onclick="voltarCarrossel3()">
 &#10216; <!-- Código HTML para a seta < -->
 </button>
 </div></div></div>
@@ -592,10 +592,10 @@ border-radius: 30%;
 <br>
 
 <div class="vitrine-container">
-<p style="margin-top: 5;font-size: 30;" id="Combos" class="título_seções">Refrigerantes</p>
+<p style="margin-top: 5;font-size: 30;" id="Refrigerantes" class="título_seções">Refrigerantes</p>
  
 <!-- Trilho horizontal onde os produtos ficam lado a lado -->
-<div class="trilho-produtos" id="trilho_1">
+<div class="trilho-produtos" id="trilho_4">
    
  <!-- Cartão de Produto 1 -->
 <div class="produto-card">
@@ -673,10 +673,10 @@ border-radius: 30%;
 </div>
    
 <!-- Botão Flutuante de Avançar (Seta da Imagem) -->
-<button class="btn-proximo" onclick="avancarCarrossel1()">
+<button class="btn-proximo" onclick="avancarCarrossel4()">
 &#10217; <!-- Código HTML para a seta > -->
 </button>
-<button class="btn-anterior" onclick="voltarCarrossel1()">
+<button class="btn-anterior" onclick="voltarCarrossel4()">
 &#10216; <!-- Código HTML para a seta < -->
 </button>
 </div></div></div>
@@ -705,4 +705,40 @@ function voltarCarrossel1() {
   trilho.scrollBy({ left: -265, behavior: 'smooth' }); // Valor negativo para voltar
 }
 // FIM BOTÕES "COMBOS" //
+
+// COMEÇO BOTÕES "TRADICIONAIS" //
+function avancarCarrossel2() {
+  const trilho = document.getElementById('trilho_2');
+  // Rola para a direita o equivalente à largura de um cartão + o espaçamento (gap)
+  trilho.scrollBy({ left: 265, behavior: 'smooth' });
+}
+function voltarCarrossel2() {
+  const trilho = document.getElementById('trilho_2');
+  trilho.scrollBy({ left: -265, behavior: 'smooth' }); // Valor negativo para voltar
+}
+// FIM BOTÕES "TRADICIONAIS" //
+
+// COMEÇO BOTÕES "PIZZAS" //
+function avancarCarrossel3() {
+  const trilho = document.getElementById('trilho_3');
+  // Rola para a direita o equivalente à largura de um cartão + o espaçamento (gap)
+  trilho.scrollBy({ left: 265, behavior: 'smooth' });
+}
+function voltarCarrossel3() {
+  const trilho = document.getElementById('trilho_3');
+  trilho.scrollBy({ left: -265, behavior: 'smooth' }); // Valor negativo para voltar
+}
+// FIM BOTÕES "PIZZAS" //
+
+// COMEÇO BOTÕES "REFRIGERANTES" //
+function avancarCarrossel4() {
+  const trilho = document.getElementById('trilho_4');
+  // Rola para a direita o equivalente à largura de um cartão + o espaçamento (gap)
+  trilho.scrollBy({ left: 265, behavior: 'smooth' });
+}
+function voltarCarrossel4() {
+  const trilho = document.getElementById('trilho_4');
+  trilho.scrollBy({ left: -265, behavior: 'smooth' }); // Valor negativo para voltar
+}
+// FIM BOTÕES "REFRIGERANTES" //
 </script>
