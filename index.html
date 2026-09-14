@@ -1,16 +1,19 @@
 <html>
 <meta charset="utf-8">
+<meta name="v<html>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 .título_seções{
-scroll-margin-top: 70px; /* Cria o recuo ideal para a barra preta não cobrir o texto */
+scroll-margin-top: 50px; /* Cria o recuo ideal para a barra preta não cobrir o texto */
 }
 hr{ /* ESTILOS LINHAS SEPARAÇÃO POR PRODUTOS */
-border: none; 
-height: 5px; 
-background-color: black; 
-width: 100%; 
+border: none;
+height: 5px;
+background-color: black;
 border-radius: 50%;
+margin-left: -8px;
+margin-right: -8px;
 }
 html { /* MARGEM E BORDA DA PÁGINA */
 border: 1px solid;
@@ -18,10 +21,10 @@ margin: 8px 8px 8px 8px;
 background-color: bisque;
 }
 .logo_img { /* FORMATAÇÃO IMAGEM */
-width: 60px; 
-height: 60px; 
-border: 1px solid; 
-border-radius: 50%; 
+width: 60px;
+height: 50px;
+border: 1px solid;
+border-radius: 50%;
 object-fit: cover;
 }
 .nome_marca { /* NOME MARCA */
@@ -32,18 +35,18 @@ color: blue;
 text-align: right;
 font-size: 15px;
 margin: 0;
-margin-left: auto; 
+margin-left: auto;
 }
 .taxa_entrega {  /* TAXA DE ENTREGA */
-border: 1px solid; 
+border: 1px solid;
 margin: 8px -9px;
-justify-content:space-around; 
+justify-content:space-around;
 display: flex;
 padding: 8px;
 background-color: bisque;
 }
 .início_site { /* ALINHAMENTO INÍCIO SITE */
-display: flex; 
+display: flex;
 align-items: center;
 border: 1px solid;
 gap: 2px;
@@ -64,6 +67,7 @@ margin: -8px 5px 5px 8px;
 padding: 2px 5px 15px 20px;
 }
 
+
 /* O trilho que organiza os cartões horizontalmente */
 .trilho-produtos {
   display: flex;
@@ -74,21 +78,27 @@ padding: 2px 5px 15px 20px;
 }
 
 
+
+
 /* Esconde a barra de rolagem no Chrome e Safari */
 .trilho-produtos::-webkit-scrollbar {
   display: none;
 }
 
 
+
+
 /* Estilo individual de cada cartão branco */
 .produto-card {
-  flex: 0 0 220px; /* Largura fixa de cada cartão de produto */
+  flex: 0 0 207px; /* Largura fixa de cada cartão de produto */
   background-color: #fff;
   border-radius: 12px;
   padding: 15px;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
+
 
 
 /* Centralização das fotos dos produtos */
@@ -106,6 +116,8 @@ padding: 2px 5px 15px 20px;
 }
 
 
+
+
 .titulo-produto {
   font-size: 16px;
   color: #333;
@@ -117,6 +129,8 @@ padding: 2px 5px 15px 20px;
 }
 
 
+
+
 /* Alinhamento dos selos vermelhos e rosas */
 .tag-oferta {
   display: flex;
@@ -124,6 +138,8 @@ padding: 2px 5px 15px 20px;
   align-items: center;
   margin-bottom: 12px;
 }
+
+
 
 
 .desconto {
@@ -138,13 +154,16 @@ padding: 2px 5px 15px 20px;
   color: #d1004b;
   font-size: 12px;
   font-weight: bold;
+  margin-right: -4;
 }
+
 
 /* Seção de preços abaixo */
 .precos {
   display: flex;
   align-items: baseline;
   gap: 8px;
+  align-items: center;
 }
 .preco-atual {
   font-size: 18px;
@@ -152,10 +171,11 @@ padding: 2px 5px 15px 20px;
   color: #111;
 }
 .preco-antigo {
-  font-size: 12px;
+  font-size: 17px;
   color: #777;
   text-decoration: line-through; /* Linha riscando o preço antigo */
 }
+
 
 /* ─── A SETA FLUTUANTE IGUAL À DA IMAGEM ─── */
 .btn-proximo, .btn-anterior {
@@ -209,6 +229,7 @@ border-radius: 30%;
 }
 </style>
 
+
 <div class="início_site">
 <img class="logo_img" src="https://img.magnific.com/vetores-gratis/ilustracao-em-vetor-icone-hamburguer-colorido-isolado-no-fundo-branco_134830-1656.jpg?semt=ais_hybrid&w=740&q=80" alt="">
 <p class="nome_marca">Hamburgueria<br>Fast Burguer</p>
@@ -224,8 +245,10 @@ border-radius: 30%;
 </div>
 <br><br>
 
+
 <div class="vitrine-container"> <!-- PRODUTOS MAIS PEDIDOS -->
 <p style="margin-top: 5;font-size: 30;" id="Mais_Pedidos" class="título_seções">Mais Pedidos</p>
+
 
 <!-- Trilho horizontal onde os produtos ficam lado a lado -->
 <div class="trilho-produtos" id="trilho">
@@ -239,10 +262,11 @@ border-radius: 30%;
 <span class="selo-evento">Ofertas 9.9</span>
 </div>
 <div class="precos">
-<span class="preco-atual">R$ 55,28</span>
 <span class="preco-antigo">R$ 100,24</span>
+<span class="preco-atual">R$ 55,28</span>
 </div>
 </div>
+
 
 <!-- Cartão de Produto 2 -->
 <div class="produto-card">
@@ -258,6 +282,7 @@ border-radius: 30%;
 </div>
 </div>
 
+
 <!-- Cartão de Produto 3 -->
 <div class="produto-card">
 <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
@@ -272,18 +297,6 @@ border-radius: 30%;
 </div>
 </div>
 
-<div class="produto-card">
-<div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
-<h3 class="titulo-produto">EUCERIN Protetor...</h3>
-<div class="tag-oferta">
-<span class="desconto">33% de desconto</span>
-<span class="selo-evento">Ofertas 9.9</span>
-</div>
-<div class="precos">
-<span class="preco-atual">R$ 62,92</span>
-<span class="preco-antigo">R$ 94,90</span>
-</div>
-</div>
 
 <div class="produto-card">
 <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
@@ -297,6 +310,21 @@ border-radius: 30%;
 <span class="preco-antigo">R$ 94,90</span>
 </div>
 </div>
+
+
+<div class="produto-card">
+<div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
+<h3 class="titulo-produto">EUCERIN Protetor...</h3>
+<div class="tag-oferta">
+<span class="desconto">33% de desconto</span>
+<span class="selo-evento">Ofertas 9.9</span>
+</div>
+<div class="precos">
+<span class="preco-atual">R$ 62,92</span>
+<span class="preco-antigo">R$ 94,90</span>
+</div>
+</div>
+
 
  <div class="produto-card">
 <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
@@ -309,7 +337,7 @@ border-radius: 30%;
 <span class="preco-atual">R$ 62,92</span>
 <span class="preco-antigo">R$ 94,90</span>
 </div>
-    
+   
 <!-- Botão Flutuante de Avançar (Seta da Imagem) -->
 <button class="btn-proximo" onclick="avancarCarrossel() ">
 &#10217; <!-- Código HTML para a seta > -->
@@ -319,8 +347,10 @@ border-radius: 30%;
 </button>
 </div></div></div>
 
-<hr style="border: none; height: 5px; background-color: black; width: 100%; border-radius: 50%;">
+
+<hr>
 <br>
+
 
 <div class="vitrine-container">
 <p style="margin-top: 5;font-size: 30;" id="Combos" class="título_seções">Combos</p>
@@ -342,6 +372,7 @@ border-radius: 30%;
       </div>
     </div>
 
+
     <!-- Cartão de Produto 2 -->
     <div class="produto-card">
       <div class="imagem-box"><img src="images.jpg" alt="Philips OneBlade"></div>
@@ -355,6 +386,8 @@ border-radius: 30%;
         <span class="preco-antigo">R$ 159,90</span>
       </div>
     </div>
+
+
 
 
     <!-- Cartão de Produto 3 -->
@@ -371,6 +404,7 @@ border-radius: 30%;
       </div>
     </div>
 
+
  <div class="produto-card">
       <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
       <h3 class="titulo-produto">EUCERIN Protetor...</h3>
@@ -383,6 +417,7 @@ border-radius: 30%;
         <span class="preco-antigo">R$ 94,90</span>
       </div>
     </div>
+
 
      <div class="produto-card">
       <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
@@ -397,6 +432,7 @@ border-radius: 30%;
       </div>
     </div>
 
+
  <div class="produto-card">
       <div class="imagem-box"><img src="eucerin.png" alt="Eucerin"></div>
       <h3 class="titulo-produto">EUCERIN Protetor...</h3>
@@ -408,7 +444,7 @@ border-radius: 30%;
         <span class="preco-atual">R$ 62,92</span>
         <span class="preco-antigo">R$ 94,90</span>
       </div>
-    
+   
       <!-- Botão Flutuante de Avançar (Seta da Imagem) -->
   <button class="btn-proximo" onclick="avancarCarrossel1()">
     &#10217; <!-- Código HTML para a seta > -->
@@ -416,9 +452,11 @@ border-radius: 30%;
    <button class="btn-anterior" onclick="voltarCarrossel1()">
     &#10216; <!-- Código HTML para a seta < -->
   </button>
-</div></div></div> 
+</div></div></div>
 
-<hr style="border: none; height: 5px; background-color: black; width: 100%; border-radius: 50%;">
+
+<hr>
+
 
 <script>
 // COMEÇO BOTÕES "MAIS PEDIDOS" //
@@ -433,6 +471,7 @@ function voltarCarrossel() {
 }
 // FIM BOTÕES "MAIS PEDIDOS" //
 
+
 // COMEÇO BOTÕES "COMBOS" //
 function avancarCarrossel1() {
   const trilho = document.getElementById('trilho_1');
@@ -445,4 +484,5 @@ function voltarCarrossel1() {
 }
 // FIM BOTÕES "COMBOS" //
 </script>
-</html>
+
+
